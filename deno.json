@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Decho - A deno based echo server",
+
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --allow-write ./core/main.ts env=qa",
+    "prod": "deno run --allow-net --allow-read --allow-write ./core/main.ts env=prod",
+    "test": "deno run ./test/main_test.ts"
+  },
+  "lint": {
+    "include": ["core/"],
+    "exclude": ["test/**/*.ts"],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  }
+}
