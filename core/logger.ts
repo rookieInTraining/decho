@@ -15,11 +15,11 @@ await log.setup({
     //assign handlers to loggers  
     loggers: {
         default: {
-            level: "DEBUG",
+            level: "INFO",
             handlers: ["console"],
         },
         client: {
-            level: "INFO",
+            level: "DEBUG",
             handlers: ["file"]
         }
     },

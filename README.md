@@ -16,11 +16,11 @@ For prod:
 If using powershell, you can use `Invoke-WebRequest` to execute an HTTP request. In case of linux, use `curl`.
 
 For Windows:
-```
-(base) PS C:\Users\ishab> $response = Invoke-WebRequest -Uri 'http://localhost:8080/echo' -Method POST -Headers $headers -ContentType 'application/json' -Body '{
+```powershell
+$response = Invoke-WebRequest -Uri 'http://localhost:8080/echo' -Method POST -Headers $headers -ContentType 'application/json' -Body '{
 >>   "key": [1, 2, 3, 4, 5, 6]
 >> }'
-(base) PS C:\Users\ishab> echo $response
+echo $response
 
 StatusCode        : 200
 StatusDescription : OK
@@ -42,11 +42,11 @@ RelationLink      : {}
 ```
 
 Set the `showVerbose` parameter to `true` to print the response headers as well along with the content sent as payload:
-```
-(base) PS C:\Users\ishab> $response = Invoke-WebRequest -Uri 'http://localhost:8080/echo?showVerbose=true' -Method POST -Headers $headers -ContentType 'application/json' -Body '{
+```powershell
+$response = Invoke-WebRequest -Uri 'http://localhost:8080/echo?showVerbose=true' -Method POST -Headers $headers -ContentType 'application/json' -Body '{
 >>   "key": [1, 2, 3, 4, 5, 6]
 >> }'
-(base) PS C:\Users\ishab> echo $response
+echo $response
 
 StatusCode        : 200
 StatusDescription : OK
